@@ -10,18 +10,21 @@
 " 18-03-2016 Menno Harzing  Vundle, plugins, tabsettings
 " --------------------------------------------------------------------------------------------------------------------------------------
 
-set et                                                                        " no tabs, ever
-set ts=2                                                                      " tab inserts 2 spaces
-set sw=2                                                                      " (un)indent is 2 spaces
-set ai                                                                        " line align vertically with line above
-runtime! indent.vim                                                           " make automatic indentation work!
+set et                        " no tabs, ever
+set ts=2                      " tab inserts 2 spaces
+set sw=2                      " (un)indent is 2 spaces
+set ai                        " line align vertically with line above
+"runtime! indent.vim           " make automatic indentation work!
+filetype plugin indent on
 
 " --------------------------------------------------------------------------------------------------------------------------------------
 " Vundle Configuration
 " --------------------------------------------------------------------------------------------------------------------------------------
-set nocompatible                                                              " be iMproved, required
-filetype off                                                                  " required
-set rtp+=~/.vim/bundle/Vundle.vim                                             " set the runtime path to include Vundle and initialize
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -35,6 +38,7 @@ Plugin 'tpope/vim-fugitive'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+" --------------------------------------------------------------------------------------------------------------------------------------
 
 
 " --------------------------------------------------------------------------------------------------------------------------------------
